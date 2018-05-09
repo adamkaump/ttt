@@ -56,9 +56,9 @@ class CommonAPI {
 }
 
 extension CommonAPI {
-    class func userQueryDictionary(userId: String) -> [String: AnyObject] {
-        var dict = [String: AnyObject]()
-        dict["records"] = ["recordName": userId] as AnyObject
+    class func userQueryDictionary(userId: String) -> [String: Any] {
+        var dict = [String: Any]()
+        dict["records"] = ["recordName": userId] as Any
         return dict
     }
 
