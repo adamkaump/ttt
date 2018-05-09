@@ -62,12 +62,12 @@ extension CommonAPI {
         return dict
     }
 
-    class func userBankUpdateDictionary(user: [String: AnyObject], newBank: Int) -> [String: AnyObject] {
+    class func userBankUpdateDictionary(user: [String: Any], newBank: Int) -> [String: Any] {
         let recordName = user["recordName"] as! String
         let changeTag = user["recordChangeTag"] as! String
 
-        var dict = [String: AnyObject]()
-        dict["operations"] = ["operationType": "update", "record": ["recordName": recordName, "recordChangeTag": changeTag, "fields": ["bank": ["value": newBank]]]] as AnyObject
+        var dict = [String: Any]()
+        dict["operations"] = ["operationType": "update", "record": ["recordName": recordName, "recordChangeTag": changeTag, "fields": ["bank": ["value": newBank]]]] as Any
         return dict
     }
 }
