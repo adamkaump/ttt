@@ -55,22 +55,22 @@ class CommonAPI {
 //
 }
 
-extension CommonAPI {
-    class func userQueryDictionary(userId: String) -> [String: Any] {
-        var dict = [String: Any]()
-        dict["records"] = ["recordName": userId] as Any
-        return dict
-    }
-
-    class func userBankUpdateDictionary(user: [String: Any], newBank: Int) -> [String: Any] {
-        let recordName = user["recordName"] as! String
-        let changeTag = user["recordChangeTag"] as! String
-
-        var dict = [String: Any]()
-        dict["operations"] = ["operationType": "update", "record": ["recordName": recordName, "recordChangeTag": changeTag, "fields": ["bank": ["value": newBank]]]] as Any
-        return dict
-    }
-}
+//extension CommonAPI {
+//    class func userQueryDictionary(userId: String) -> [String: Any] {
+//        var dict = [String: Any]()
+//        dict["records"] = ["recordName": userId] as Any
+//        return dict
+//    }
+//
+//    class func userBankUpdateDictionary(user: [String: Any], newBank: Int) -> [String: Any] {
+//        let recordName = user["recordName"] as! String
+//        let changeTag = user["recordChangeTag"] as! String
+//
+//        var dict = [String: Any]()
+//        dict["operations"] = ["operationType": "update", "record": ["recordName": recordName, "recordChangeTag": changeTag, "fields": ["bank": ["value": newBank]]]] as Any
+//        return dict
+//    }
+//}
 
 //extension Dictionary where Key == String, Value == AnyObject {
 //    func fieldValueFor(_ key: String) -> AnyObject {
