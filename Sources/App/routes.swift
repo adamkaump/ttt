@@ -1,4 +1,5 @@
 import Vapor
+import AVKit
 
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
@@ -7,7 +8,6 @@ public func routes(_ router: Router) throws {
         return "Hello, world!"
     }
     
-    let key: SecKey
     
 //    #if swift(>=5.0)
 //    print("Hello, Swift 5.0")
