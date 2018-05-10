@@ -7,6 +7,8 @@ public func routes(_ router: Router) throws {
         return "Hello, world!"
     }
     
+    let key: SecKey
+    
 //    #if swift(>=5.0)
 //    print("Hello, Swift 5.0")
 //    #elseif swift(>=4.1)
